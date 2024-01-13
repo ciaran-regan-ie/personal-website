@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import HomePage from './pages/HomePage'; // Import HomePage
+import Container from '@mui/material/Container'; // Import Container
 
-function App() {
+const App = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const handleDarkModeToggle = () => {
+    setDarkMode(!darkMode);
+  };
+
+  const theme = createTheme({
+    palette: {
+      mode: darkMode ? 'dark' : 'light',
+    },
+    typography: {
+      fontFamily: [
+        'Fira Code',
+        'monospace',
+      ].join(','),
+    },
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Container sx={{ 
+  paddingLeft: { 
+    xs: '20px', 
+    sm: '100px', 
+    md: '250px', 
+    lg: '250px', // Example value for large screens
+    xl: '250px'  // Example value for extra-large screens
+  }, 
+  paddingRight: { 
+    xs: '20px', 
+    sm: '100px', 
+    md: '250px', 
+    lg: '250px', // Example value for large screens
+    xl: '250px'  // Example value for extra-large screens
+  } 
+}}>
+        <HomePage darkMode={darkMode} onToggleDarkMode={handleDarkModeToggle} />
+      </Container>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
