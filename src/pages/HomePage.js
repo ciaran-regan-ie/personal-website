@@ -25,7 +25,7 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
       <Grid container spacing={1} alignItems="center">
         <Grid item xs={12} md={isLgUp ? 8 : 12}>
           <Typography variant="body1" sx={{ my: 1 }}>
-            ALife and AI researcher. Exploring large-scale agent systems for collective intelligence.
+            ALife and AI researcher.
           </Typography>
           <Box display="flex" alignItems="center" sx={{ mt: 1 }}>
             <Link href="https://www.google.com/maps/@36.1103664,140.1011046,3a,75y,135.67h,105.23t/data=!3m6!1e1!3m4!1swG2p1242HKNDpBrypcUcKg!2e0!7i13312!8i6656?entry=ttu" target="_blank" rel="noopener noreferrer">
@@ -112,6 +112,28 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
       <Grid item xs={12} sx={{ mt: 1 }}>
         <Typography variant="h6">Experience</Typography>
         <List dense>
+        <ListItem>
+            <ListItemText primary="Research Assistant" secondary={
+              <>
+                <Link 
+                  href="https://www.it-chiba.ac.jp/english/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  sx={{ 
+                    color: 'inherit', 
+                    textDecoration: 'none', 
+                    '&:hover': {
+                      textDecoration: 'underline',
+                      textDecorationColor: theme.palette.text.primary,
+                    },
+                  }}
+                >
+                  Chiba Institute of Technology
+                </Link>
+                {" (2024 - present)"}
+              </>}
+            />
+          </ListItem>
           <ListItem>
             <ListItemText primary="Research Assistant" secondary={
               <>
@@ -164,6 +186,50 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
       <Grid item xs={12} sx={{ mt: 1 }}>
         <Typography variant="h6">Publications</Typography>
         <List dense>
+        <ListItem>
+            <ListItemText 
+            primary={
+              <Link 
+                href="https://arxiv.org/abs/2406.12374" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                sx={{ 
+                  color: 'inherit', 
+                  textDecoration: 'none', 
+                  '&:hover': {
+                    textDecoration: 'underline',
+                    textDecorationColor: theme.palette.text.primary,
+                  },
+                }}
+              >
+                Problem-Solving in Language Model Networks
+              </Link>
+              } 
+              secondary="ALIFE (2024)" 
+            />
+          </ListItem>
+          <ListItem>
+            <ListItemText 
+            primary={
+              <Link 
+                href="https://arxiv.org/abs/2406.04663" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                sx={{ 
+                  color: 'inherit', 
+                  textDecoration: 'none', 
+                  '&:hover': {
+                    textDecoration: 'underline',
+                    textDecorationColor: theme.palette.text.primary,
+                  },
+                }}
+              >
+                LLM-POET: Evolving Complex Environments using Large Language Models
+              </Link>
+              } 
+              secondary="GECCO (2024)" 
+            />
+          </ListItem>
           <ListItem>
             <ListItemText 
             primary={
