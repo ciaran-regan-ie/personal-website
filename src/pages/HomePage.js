@@ -112,7 +112,29 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
       <Grid item xs={12} sx={{ mt: 1 }}>
         <Typography variant="h6">Experience</Typography>
         <List dense>
-        <ListItem>
+          <ListItem>
+            <ListItemText primary="Research Intern" secondary={
+              <>
+                <Link 
+                  href="https://sakana.ai/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  sx={{ 
+                    color: 'inherit', 
+                    textDecoration: 'none', 
+                    '&:hover': {
+                      textDecoration: 'underline',
+                      textDecorationColor: theme.palette.text.primary,
+                    },
+                  }}
+                >
+                  Sakana AI
+                </Link>
+                {" (2024 - present)"}
+              </>}
+            />
+          </ListItem>
+          <ListItem>
             <ListItemText primary="Research Assistant" secondary={
               <>
                 <Link 
