@@ -218,12 +218,12 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
             <ListItemText 
               primary={
                 <Link 
-                  href="https://arxiv.org/abs/2505.05522" 
-                  target="_blank" 
+                  href="https://neurips.cc/virtual/2025/poster/115192"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  sx={{ 
-                    color: 'inherit', 
-                    textDecoration: 'none', 
+                  sx={{
+                    color: 'inherit',
+                    textDecoration: 'none',
                     '&:hover': {
                       textDecoration: 'underline',
                       textDecorationColor: theme.palette.text.primary,
@@ -232,8 +232,8 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
                 >
                   Continuous Thought Machines
                 </Link>
-              } 
-              secondary="In Review (2025)" 
+              }
+              secondary="NeurIPS 2025 (Spotlight)" 
             />
           </ListItem>
           <ListItem>
