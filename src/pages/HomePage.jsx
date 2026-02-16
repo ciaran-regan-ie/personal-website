@@ -254,7 +254,7 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
                   Problem-Solving in Language Model Networks
                 </Link>
               } 
-              secondary="ALIFE (2024)" 
+              secondary="ALIFE 2024"
             />
           </ListItem>
           <ListItem>
@@ -276,7 +276,7 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
                   LLM-POET: Evolving Complex Environments using Large Language Models
                 </Link>
               } 
-              secondary="GECCO (2024)" 
+              secondary="GECCO 2024"
             />
           </ListItem>
           <ListItem>
@@ -298,7 +298,7 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
                   Simulating Emergence of Novelties using Agent-Based Models
                 </Link>
               } 
-              secondary="PLOS ONE (2023)" 
+              secondary="PLOS ONE 2023"
             />
           </ListItem>
         </List>
