@@ -2,7 +2,7 @@ import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Container, Typography, Grid, IconButton, List, ListItem, ListItemText, Box, Link } from '@mui/material';
-import { Email, GitHub, LinkedIn, X, Language, Brightness4, Brightness7 } from '@mui/icons-material';
+import { Email, GitHub, LinkedIn, X, LocationOn, Brightness4, Brightness7 } from '@mui/icons-material';
 import GoogleScholarIconLight from '../assets/google-scholar-icon-light.svg?react';
 import GoogleScholarIconDark from '../assets/google-scholar-icon-dark.svg?react';
 import profilePhoto from '../assets/profile-photo.webp';
@@ -28,14 +28,8 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
             ALife and AI researcher.
           </Typography>
           <Box display="flex" alignItems="center" sx={{ mt: 1 }}>
-            <Link
-              href="https://www.google.com/maps/@36.1103664,140.1011046,3a,75y,135.67h,105.23t/data=!3m6!1e1!3m4!1swG2p1242HKNDpBrypcUcKg!2e0!7i13312!8i6656?entry=ttu"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <IconButton><Language /></IconButton>
-            </Link>
-            <Typography variant="body2">Tsukuba, Japan</Typography>
+            <IconButton disableRipple sx={{ cursor: 'default' }}><LocationOn /></IconButton>
+            <Typography variant="body2">Tokyo, Japan</Typography>
             <Link href="mailto:ciaran.regan@websci.cs.tsukuba.ac.jp">
               <IconButton sx={{ ml: 3 }}><Email /></IconButton>
             </Link>
