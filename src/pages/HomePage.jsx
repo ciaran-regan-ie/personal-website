@@ -3,10 +3,9 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Container, Typography, Grid, IconButton, List, ListItem, ListItemText, Box, Link } from '@mui/material';
 import { Email, GitHub, LinkedIn, X, Language, Brightness4, Brightness7 } from '@mui/icons-material';
-import { ReactComponent as GoogleScholarIconLight } from '../assets/google-scholar-icon-light.svg';
-import { ReactComponent as GoogleScholarIconDark } from '../assets/google-scholar-icon-dark.svg';
-
-import profilePhoto from '../assets/profile-photo.webp'; // Import the image
+import GoogleScholarIconLight from '../assets/google-scholar-icon-light.svg?react';
+import GoogleScholarIconDark from '../assets/google-scholar-icon-dark.svg?react';
+import profilePhoto from '../assets/profile-photo.webp';
 
 const HomePage = ({ darkMode, onToggleDarkMode }) => {
   const theme = useTheme();
@@ -24,7 +23,7 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
       </Box>
 
       <Grid container spacing={1} alignItems="center">
-        <Grid item xs={12} md={isLgUp ? 8 : 12}>
+        <Grid size={{ xs: 12, md: isLgUp ? 8 : 12 }}>
           <Typography variant="body1" sx={{ my: 1 }}>
             ALife and AI researcher.
           </Typography>
@@ -58,14 +57,14 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
         </Grid>
 
         {isLgUp && (
-          <Grid item lg={4} style={{ paddingLeft: '24px', textAlign: 'right' }}>
+          <Grid size={{ lg: 4 }} style={{ paddingLeft: '24px', textAlign: 'right' }}>
             <img src={profilePhoto} alt="Ciaran Regan" style={{ width: '100px', height: 'auto', borderRadius: '8px' }} />
           </Grid>
         )}
       </Grid>
 
       {/* Education Section */}
-      <Grid item xs={12} sx={{ mt: 1 }}>
+      <Box sx={{ mt: 1 }}>
         <Typography variant="h6">Education</Typography>
         <List dense>
           <ListItem>
@@ -135,10 +134,10 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
             } />
           </ListItem>
         </List>
-      </Grid>
+      </Box>
 
       {/* Experience Section */}
-      <Grid item xs={12} sx={{ mt: 1 }}>
+      <Box sx={{ mt: 1 }}>
         <Typography variant="h6">Experience</Typography>
         <List dense>
           <ListItem>
@@ -208,10 +207,10 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
             } />
           </ListItem>
         </List>
-      </Grid>
+      </Box>
 
       {/* Publications Section */}
-      <Grid item xs={12} sx={{ mt: 1 }}>
+      <Box sx={{ mt: 1 }}>
         <Typography variant="h6">Publications</Typography>
         <List dense>
           <ListItem>
@@ -303,7 +302,7 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
             />
           </ListItem>
         </List>
-      </Grid>
+      </Box>
     </Container>
   );
 };
