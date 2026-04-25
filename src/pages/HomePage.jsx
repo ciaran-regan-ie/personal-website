@@ -209,7 +209,23 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
         <List dense>
           <ListItem>
             <ListItemText
-              primary="Discovering Novel LLM Experts via Task-Capability Coevolution"
+              primary={
+                <Link
+                  href="https://arxiv.org/abs/2604.14969"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: 'inherit',
+                    textDecoration: 'none',
+                    '&:hover': {
+                      textDecoration: 'underline',
+                      textDecorationColor: theme.palette.text.primary,
+                    },
+                  }}
+                >
+                  Discovering Novel LLM Experts via Task-Capability Coevolution
+                </Link>
+              }
               secondary="ICLR 2026"
             />
           </ListItem>
