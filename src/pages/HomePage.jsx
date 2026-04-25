@@ -208,9 +208,31 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
         <Typography variant="h6">Publications</Typography>
         <List dense>
           <ListItem>
-            <ListItemText 
+            <ListItemText
               primary={
-                <Link 
+                <Link
+                  href="https://arxiv.org/abs/2604.14969"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: 'inherit',
+                    textDecoration: 'none',
+                    '&:hover': {
+                      textDecoration: 'underline',
+                      textDecorationColor: theme.palette.text.primary,
+                    },
+                  }}
+                >
+                  Discovering Novel LLM Experts via Task-Capability Coevolution
+                </Link>
+              }
+              secondary="ICLR 2026"
+            />
+          </ListItem>
+          <ListItem>
+            <ListItemText
+              primary={
+                <Link
                   href="https://neurips.cc/virtual/2025/poster/115192"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -226,7 +248,7 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
                   Continuous Thought Machines
                 </Link>
               }
-              secondary="NeurIPS 2025 (Spotlight)" 
+              secondary="NeurIPS 2025 (Spotlight)"
             />
           </ListItem>
           <ListItem>
