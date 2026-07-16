@@ -211,6 +211,28 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
             <ListItemText
               primary={
                 <Link
+                  href="https://arxiv.org/abs/2607.02954"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: 'inherit',
+                    textDecoration: 'none',
+                    '&:hover': {
+                      textDecoration: 'underline',
+                      textDecorationColor: theme.palette.text.primary,
+                    },
+                  }}
+                >
+                  Microcosmos: Reimagining Artificial Life for the GPU Era
+                </Link>
+              }
+              secondary="ALIFE 2026"
+            />
+          </ListItem>
+          <ListItem>
+            <ListItemText
+              primary={
+                <Link
                   href="https://arxiv.org/abs/2604.14969"
                   target="_blank"
                   rel="noopener noreferrer"
