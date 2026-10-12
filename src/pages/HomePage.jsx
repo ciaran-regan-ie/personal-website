@@ -211,6 +211,28 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
             <ListItemText
               primary={
                 <Link
+                  href="https://arxiv.org/abs/2610.07907"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: 'inherit',
+                    textDecoration: 'none',
+                    '&:hover': {
+                      textDecoration: 'underline',
+                      textDecorationColor: theme.palette.text.primary,
+                    },
+                  }}
+                >
+                  Continuous Memory Machines
+                </Link>
+              }
+              secondary="NeurIPS 2026 Workshop: Personalized, Aligned, Long-Term Memory for AI Systems (PALM)"
+            />
+          </ListItem>
+          <ListItem>
+            <ListItemText
+              primary={
+                <Link
                   href="https://arxiv.org/abs/2607.02954"
                   target="_blank"
                   rel="noopener noreferrer"
