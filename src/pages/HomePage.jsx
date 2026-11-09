@@ -26,6 +26,9 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
         <Grid size={{ xs: 12, md: isLgUp ? 8 : 12 }}>
           <Typography variant="body1" sx={{ my: 1 }}>
             ALife and AI researcher.
+            <Link href="/cv.pdf" target="_blank" rel="noopener noreferrer" color="inherit" sx={{ ml: 2 }}>
+              CV (PDF)
+            </Link>
           </Typography>
           <Box display="flex" alignItems="center" sx={{ mt: 1 }}>
             <IconButton disableRipple sx={{ cursor: 'default' }}><LocationOn /></IconButton>
