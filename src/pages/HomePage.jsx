@@ -157,29 +157,7 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
             } />
           </ListItem>
           <ListItem>
-            <ListItemText primary="Research Assistant" secondary={
-              <>
-                <Link 
-                  href="https://www.it-chiba.ac.jp/english/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  sx={{ 
-                    color: 'inherit', 
-                    textDecoration: 'none', 
-                    '&:hover': {
-                      textDecoration: 'underline',
-                      textDecorationColor: theme.palette.text.primary,
-                    },
-                  }}
-                >
-                  Chiba Institute of Technology
-                </Link>
-                {" (2024 - present)"}
-              </>
-            } />
-          </ListItem>
-          <ListItem>
-            <ListItemText primary="Data Science Analyst" secondary={
+            <ListItemText primary="Data Scientist" secondary={
               <>
                 <Link 
                   href="https://accenture.com" 
