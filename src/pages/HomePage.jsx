@@ -2,7 +2,7 @@ import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Container, Typography, Grid, IconButton, List, ListItem, ListItemText, Box, Link } from '@mui/material';
-import { Email, GitHub, LinkedIn, X, LocationOn, Brightness4, Brightness7 } from '@mui/icons-material';
+import { Email, GitHub, LinkedIn, X, LocationOn, Brightness4, Brightness7, DescriptionOutlined } from '@mui/icons-material';
 import GoogleScholarIconLight from '../assets/google-scholar-icon-light.svg?react';
 import GoogleScholarIconDark from '../assets/google-scholar-icon-dark.svg?react';
 import profilePhoto from '../assets/profile-photo.webp';
@@ -26,11 +26,8 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
         <Grid size={{ xs: 12, md: isLgUp ? 8 : 12 }}>
           <Typography variant="body1" sx={{ my: 1 }}>
             ALife and AI researcher.
-            <Link href="/cv.pdf" target="_blank" rel="noopener noreferrer" color="inherit" sx={{ ml: 2 }}>
-              CV (PDF)
-            </Link>
           </Typography>
-          <Box display="flex" alignItems="center" sx={{ mt: 1 }}>
+          <Box display="flex" alignItems="center" flexWrap="wrap" sx={{ mt: 1 }}>
             <IconButton disableRipple sx={{ cursor: 'default' }}><LocationOn /></IconButton>
             <Typography variant="body2">Tokyo, Japan</Typography>
             <Link href="mailto:ciaran.regan@websci.cs.tsukuba.ac.jp">
@@ -45,6 +42,9 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
             <Link href="https://github.com/ciaran-regan-ie" target="_blank" rel="noopener noreferrer">
               <IconButton><GitHub /></IconButton>
             </Link>
+            <IconButton component="a" href="/cv.pdf" target="_blank" rel="noopener noreferrer" aria-label="View CV" title="View CV">
+              <DescriptionOutlined />
+            </IconButton>
             <Link href="https://scholar.google.com/citations?user=q35leGMAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
               <IconButton>
                 <GoogleScholarIcon />
@@ -160,6 +160,12 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
             } />
           </ListItem>
           <ListItem>
+            <ListItemText
+              primary="Freelance Research Assistant"
+              secondary="Research supervised by Prof. Mizuki Oka (2023 - 2024)"
+            />
+          </ListItem>
+          <ListItem>
             <ListItemText primary="Data Scientist" secondary={
               <>
                 <Link 
@@ -207,7 +213,11 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
                   Differentiable Plastic Recurrent Neural Networks: A Systematic Evaluation
                 </Link>
               }
-              secondary="TMLR 2026"
+              secondary={
+                <>
+                  <strong>Ciaran Regan</strong>, Kai Arulkumaran, Sebastian Risi, Llion Jones. <em>TMLR 2026.</em>
+                </>
+              }
             />
           </ListItem>
           <ListItem>
@@ -229,7 +239,11 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
                   Continuous Memory Machines
                 </Link>
               }
-              secondary="NeurIPS 2026 Workshop: Personalized, Aligned, Long-Term Memory for AI Systems (PALM)"
+              secondary={
+                <>
+                  <strong>Ciaran Regan</strong>, Kai Arulkumaran, Luke Darlow, Stefania Druga, Sebastian Risi, Llion Jones. <em>NeurIPS 2026 Workshop: PALM; under review at ICLR.</em>
+                </>
+              }
             />
           </ListItem>
           <ListItem>
@@ -251,7 +265,11 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
                   Microcosmos: Reimagining Artificial Life for the GPU Era
                 </Link>
               }
-              secondary="ALIFE 2026"
+              secondary={
+                <>
+                  Mark Tensen, <strong>Ciaran Regan</strong>, Bert Wang-Chak Chan, Mizuki Oka, Kenneth O. Stanley, Grisha Szep. <em>ALIFE 2026.</em>
+                </>
+              }
             />
           </ListItem>
           <ListItem>
@@ -273,7 +291,11 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
                   Discovering Novel LLM Experts via Task-Capability Coevolution
                 </Link>
               }
-              secondary="ICLR 2026"
+              secondary={
+                <>
+                  Andrew Dai, Boris Meinardus, <strong>Ciaran Regan</strong>, Yingtao Tian, Yujin Tang. <em>ICLR 2026.</em>
+                </>
+              }
             />
           </ListItem>
           <ListItem>
@@ -295,7 +317,11 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
                   Continuous Thought Machines
                 </Link>
               }
-              secondary="NeurIPS 2025 (Spotlight)"
+              secondary={
+                <>
+                  Luke Darlow, <strong>Ciaran Regan</strong>, Sebastian Risi, Jeffrey Seely, Llion Jones. <em>NeurIPS 2025 (Spotlight).</em>
+                </>
+              }
             />
           </ListItem>
           <ListItem>
@@ -317,7 +343,11 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
                   Problem-Solving in Language Model Networks
                 </Link>
               } 
-              secondary="ALIFE 2024"
+              secondary={
+                <>
+                  <strong>Ciaran Regan</strong>, Alexandre Gournail, Mizuki Oka. <em>ALIFE 2024.</em>
+                </>
+              }
             />
           </ListItem>
           <ListItem>
@@ -339,7 +369,11 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
                   LLM-POET: Evolving Complex Environments using Large Language Models
                 </Link>
               } 
-              secondary="GECCO 2024"
+              secondary={
+                <>
+                  Fuma Aki, Riku Ikeda, Takumi Saito, <strong>Ciaran Regan</strong>, Mizuki Oka. <em>GECCO 2024.</em>
+                </>
+              }
             />
           </ListItem>
           <ListItem>
@@ -361,7 +395,11 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
                   Simulating Emergence of Novelties using Agent-Based Models
                 </Link>
               } 
-              secondary="PLOS ONE 2023"
+              secondary={
+                <>
+                  Mikihiro Suda, Takumi Saito, Nanami Iwahashi, <strong>Ciaran Regan</strong>, Mizuki Oka. <em>PLOS ONE 2023.</em>
+                </>
+              }
             />
           </ListItem>
         </List>
