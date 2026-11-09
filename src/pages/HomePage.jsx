@@ -211,6 +211,28 @@ const HomePage = ({ darkMode, onToggleDarkMode }) => {
             <ListItemText
               primary={
                 <Link
+                  href="https://openreview.net/forum?id=8z0trg6tku"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: 'inherit',
+                    textDecoration: 'none',
+                    '&:hover': {
+                      textDecoration: 'underline',
+                      textDecorationColor: theme.palette.text.primary,
+                    },
+                  }}
+                >
+                  Differentiable Plastic Recurrent Neural Networks: A Systematic Evaluation
+                </Link>
+              }
+              secondary="TMLR 2026"
+            />
+          </ListItem>
+          <ListItem>
+            <ListItemText
+              primary={
+                <Link
                   href="https://arxiv.org/abs/2610.07907"
                   target="_blank"
                   rel="noopener noreferrer"
